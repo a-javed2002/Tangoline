@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+  <style>
+ *{
+   margin: 0%;
+    padding: 0%;
+  }
+  .navbar-collapse{
+              flex-grow: 0 ;
+          }
+
+          .navbar-nav li a:hover{
+            color: #90eb00;
+          }
+          .navbar-nav li a{
+            text-decoration: none;
+            color: white;
+          }
+          .navbar-nav li{
+            font-family: 'Luckiest Guy', cursive;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 16px;
+            margin-top: 6px;
+            text-shadow: 0px 2.5px 2px #101820FF;
+          }
+          #navbar{
+            transition: 2s;
+            position: fixed;
+            width: 100%;
+            z-index: 99;
+            top: 0%;
+          }
+          body::-webkit-scrollbar
+{
+  width: 14px;
+}
+body::-webkit-scrollbar-thumb
+{
+  
+  background:  white;
+}
+          .footer-dark {
+    padding:50px 0;
+    color:#edf0e8;
+    background-color:#101820FF;
+    border-top: 0.1px solid white;
+    margin-top: 2%;
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#fff;
+    opacity:0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:0.9;
+    background-color: #88de00;
+    color: #101820FF;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
+  .tangoline h3{
+    color: #a3ff12;
+  }
+  
+  .games h3{
+    color: #a3ff12;;
+  }
+  .console h3{
+    color: #a3ff12;;
+  }
+  .parallex{
+  background-image: url('../images/parallex tony.jpg') ;
+  height: 40vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+          
+          .parallex div h1{
+            font-size: 5vw;
+  font-family: 'Poppins';
+  font-weight: 900;
+  color: white;
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+          }
+          .parallex div p{
+            color: white;
+            text-align: center;
+          }
+          .parallex div{
+            padding: 10%;
+          }
+          .container h2{
+            color: rgb(66, 200, 25);
+        text-shadow: 0px 2.5px 2px #88de00;
+        font-family: 'Poppins';
+        font-weight: 800;
+          }
+          .p{
+  width: 75% ;
+  margin-bottom: 7%;
+  font-family: 'Poppins';
+  color: white;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+.container{
+  margin-top: 7%;
+}
+.parallex div p a{
+  color: white;
+  text-decoration: none;
+}
+.movie {
+    max-width: 800px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 5px 20px 10px rgba(0, 0, 0, .2);
+   overflow: hidden;
+   margin-left: 18%;
+    margin-top: 5%;
+}
+
+.movie__hero {
+  flex: 0 0 45%;
+}
+
+.movie__img {
+    width: 100%;
+    display: block;
+}
+
+.movie__content {
+    background-color: #101820FF;
+    flex: 1;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie__price {
+    background:linear-gradient(to bottom, #A9C9FF 0%, #FFBBEC 100%);
+    flex: 0 0 50px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading__primary {
+    font-size: 16px;
+    margin-right: auto;
+    color: #a3ff12;
+}
+
+
+.movie__tag {
+    font-size: 10px;
+    color: #fff;
+  padding: 2px 7px;
+  border-radius: 100px;
+  margin-right: 8px;
+  display: block;
+  text-transform: uppercase;
+
+}
+
+.movie__description {
+    font-size: 14px;
+    color: #fff;
+}
+
+.movie__details {
+    display: flex;
+    margin: auto;
+}
+
+.movie__detail {
+   font-size: 13px;
+   margin-right: 20px;
+   display: flex;
+   align-items: center;
+}
+p{
+  color: white;
+}
+  </style>
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+   
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    
+    document.getElementById("navbar").style.background = "#101820FF";
+  } else {
+   
+    document.getElementById("navbar").style.background = "none";
+  }
+}
+</script>
+  </head>
+  <body style="background-color: #101820FF;" class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html" style="width: 15%;"><img src="../Tangoline logo (1).png" alt="" style="width: 165px; height: auto;" ></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../images/icons8-hamburger-menu-40.png" alt="" class="navbar-toggler-icon">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="flex-grow: 0;">
+          <ul class="navbar-nav  mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="" aria-current="page" href="../index.html">HOME</a>
+            </li>
+            <li class="nav-item ">
+              <a class="" href="../pages/about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="../pages/brands.html">BRANDS</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="../pages/console.html">CONSOLE</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="../pages/compare.html">COMPARE</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="../pages/contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="parallex img-fluid">
+      <div style="width: 100%;"><h1>Tony Hawk Skater.</h1>
+        <p><a href="../index.html">HOME</a> &nbsp; / &nbsp; <a href="../pages/brands.html">BRANDS</a>&nbsp; / &nbsp; <a href="../brands/Actvision.html">ACTVISION</a>&nbsp; / &nbsp; <a href="tony hawk.html">TONY HAWK</a></p></div>
+     </section>
+    
+     <div class="container">
+      <figure class="movie">
+       <div class="movie__hero">
+         <img src="../images/tony hawk pro.jpg" alt="Rambo" class="movie__img img-fluid">
+       </div>
+       <div class="movie__content">
+         <div class="movie__title">
+           <h1 class="heading__primary">Tony Hawk Skater pro 1 + 2<i class="fas fa-fire"></i></h1>
+           
+         </div>
+         <p class="movie__description">
+ 
+          Tony Hawk's Pro Skater 1 + 2 is a skateboarding video game developed by Vicarious Visions and published by Activision. It was released for Microsoft Windows, PlayStation 4, and Xbox One on September 4, 2020, PlayStation 5 and Xbox Series X/S on March 26, 2021, and Nintendo Switch on June 25, 2021.</p>
+           <h1 class="heading__primary">Publisher: <i class="fas fa-fire"></i></h1>
+           <p >Activision</p>
+           <h1 class="heading__primary">Developer: <i class="fas fa-fire"></i></h1>
+           <p>Vicarious Visions, Neversoft</p>
+           <h1 class="heading__primary">Platform: <i class="fas fa-fire"></i></h1>
+           <p>  Nintendo Switch, Xbox Series X and Series S, PlayStation 4, Microsoft Windows, Xbox One, PlayStation 5</p>
+       </div>
+       
+     </figure>
+       
+       
+       
+   </div>
+     <div class="footer-dark">
+      <footer>
+        <div class="container">
+          <div class="row">
+
+              <div class="col-md-6 item text tangoline" id="tangoline">
+                  <h3>Tangoline</h3>
+                  <p >Video games are the current rend and people of all ages are behind the various kinds of video games available today. A video game is an electronic game which involves a human interaction with a user interface, which would generate a visual feedback onto a video device.
+
+                    </p>
+              </div>
+              <div class="col-sm-6 col-md-3 item games ">
+                  <h3>Brands</h3>
+                  <ul>
+                      <li><a href="../brands/Sony.html">Sony</a></li>
+                      <li><a href="../brands/Actvision.html">Actvision</a></li>
+                      <li><a href="../brands/Tencent.html">Tencent</a></li>
+                      <li><a href="../brands/Ubisoft.html">Ubisoft</a></li>
+                      <li><a href="../brands/epic.html">Epic Games</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item console">
+                  <h3>Consoles</h3>
+                  <ul>
+                      <li><a href="../pages/console.html">PS5</a></li>
+                      <li><a href="../pages/console.html">Xbox Series X</a></li>
+                      <li><a href="../pages/console.html">Xbox Series S</a></li>
+                      <li><a href="../pages/console.html">PS4 Pro</a></li>
+                      <li><a href="../pages/console.html">Nintendo Switch</a></li>
+                  </ul>
+              </div>
+
+              <div class="col item social"><a href="https://www.facebook.com/login.php"><i class="icon ion-social-facebook"></i></a>
+              <a href="https://twitter.com/i/flow/login"><i class="icon ion-social-twitter"></i></a>
+              <a href="https://www.whatsapp.com/"><i class="icon ion-social-whatsapp"></i></a>
+              <a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a></div>
+          </div>
+          <p class="copyright">Copyright &copy; All right reserved by Tangoline</p>
+      </div>
+      </footer>
+  </div>
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+  <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <style>
+        *{
+   margin: 0%;
+    padding: 0%;
+  }
+  .navbar-collapse{
+              flex-grow: 0 ;
+          }
+
+          .navbar-nav li a:hover{
+            color: #90eb00;
+          }
+          .navbar-nav li a{
+            text-decoration: none;
+            color: white;
+          }
+          .navbar-nav li{
+            font-family: 'Luckiest Guy', cursive;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 16px;
+            margin-top: 6px;
+            text-shadow: 0px 2.5px 2px #101820FF;
+          }
+          #navbar{
+            transition: 2s;
+            position: fixed;
+            width: 100%;
+            z-index: 99;
+            top: 0%;
+          }
+
+          .parallex{
+  background-image: url('../images/contact para.jpg') ;
+  height: 40vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+          
+          .parallex div h1{
+            font-size: 5vw;
+  font-family: 'Poppins';
+  font-weight: 900;
+  color: white;
+  text-align: center !important;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+          }
+          .parallex div p{
+            color: white;
+            text-align: center;
+          }
+          .parallex div{
+            padding: 10%;
+          }
+
+          .form-control:focus {
+        color: #212529;
+        background-color: #fff;
+        ;
+    }
+
+    .container h1 {
+        color: rgb(66, 200, 25);
+        text-shadow: 0px 2.5px 2px #88de00;
+        font-family: 'Poppins';
+        font-weight: 800;
+    }
+
+    .container {
+      background-color: #101820FF;
+      color: white;
+      height: 52vh;
+      height: auto;
+        margin-top: 80px;
+        padding-top: 17px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 9px;
+        margin-bottom: 5%;
+    }
+    .input{
+      background-color: #101820FF!important;
+      color: white!important;
+      margin-top: 2.5vw;
+      border: none!important;
+      box-shadow: none!important;
+      border-bottom: 3px solid #88de00!important;
+    }
+
+    button {
+ --green: #88de00;
+ font-size: 15px;
+ padding: 10px ;
+ letter-spacing: 0.06em;
+ position: relative;
+ font-family: inherit;
+ border-radius: 1em;
+ overflow: hidden;
+ transition: all 0.3s;
+ line-height: 1.4em;
+ border: 2px solid var(--green);
+ background: linear-gradient(to right, rgba(8, 223, 8, 0.144) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+ color: var(--green);
+ 
+ 
+}
+
+button:hover {
+ color: #45f335;
+ box-shadow: inset 0 0 10px #45f335, 0 0 9px 3px #45f335;
+}
+
+   
+.footer-dark {
+    color:#edf0e8;
+    background-color:#101820FF;
+    border-top: 0.1px solid white;
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#fff;
+    opacity:0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:0.9;
+    background-color: #88de00;
+    color: #101820FF;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
+  .tangoline h3{
+    color: #a3ff12;
+  
+  }
+  .games h3{
+    color: #a3ff12;;
+  }
+  .console h3{
+    color: #a3ff12;;
+  }
+  #embedMap{
+    width: 100%;
+    height: 400px;
+  }
+  .parallex div p a{
+  color: white;
+  text-decoration: none;
+}
+body::-webkit-scrollbar
+{
+  width: 14px;
+}
+body::-webkit-scrollbar-thumb
+{
+  
+  background:  white;
+}
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
+
+  #active{
+  color:#90eb00 ;
+}
+    </style>
+
+    <script>
+      function showPosition(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showMap);
+    } else{
+        alert("Sorry, your browser does not support HTML5 geolocation.");
+    }
+}
+// Define callback function for successful attempt
+function showMap(position){
+    // Get location data
+    lat = 24.92739972609719;
+    long = 67.03294309071822;
+    var latlong = new google.maps.LatLng(lat, long);
+    var myOptions = {
+        center: latlong,
+        zoom: 18,
+    }
+    var image = {
+      url: '../Tangoline logo (1).png'
+    };
+    var map = new google.maps.Map(document.getElementById("embedMap"), myOptions);
+    var marker = new google.maps.Marker({position:latlong, icon:image,map:map, title:"Aptech Computer Education North Nazimabad Center"});
+}
+// Define callback function for failed attempt
+    </script>
+<script type="text/javascript">
+     window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    
+    document.getElementById("navbar").style.background = "#101820FF";
+  } else {
+   
+    document.getElementById("navbar").style.background = "none";
+  }
+}
+</script>
+    
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  </head>
+  <body style="background-color: #101820FF;" onload="showPosition();" class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html" style="width: 15%;"><img src="../Tangoline logo (1).png" alt="" style="width: 165px; height: auto;" ></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../images/icons8-hamburger-menu-40.png" alt="" class="navbar-toggler-icon">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="flex-grow: 0;">
+          <ul class="navbar-nav  mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="" aria-current="page" href="../index.html">HOME</a>
+            </li>
+            <li class="nav-item ">
+              <a class="" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="brands.html">BRANDS</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="console.html">CONSOLE</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="compare.html">COMPARE</a>
+            </li>
+            <li class="nav-item">
+              <a class="" href="contact.html" id="active">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+           <section class="parallex img-fluid">
+            <div style="width: 100%;"><h1>Contact.</h1>
+              <p><a href="../index.html">HOME</a> &nbsp; / &nbsp; <a href="contact.html">CONTACT</a></p></div>
+           </section> 
+           <div class="container">
+            <h1>Contact Us</h1>
+              <div class="row">
+                <div class="col-md-6">
+                  <form>
+                 <div class="row">
+                  <div class="col-md-6">
+                    <input type="text" class="input form-control" id="fname" placeholder="First Name" required  onblur="firstname()">
+                    <center><span style="display: block;" id="p1" class="validation_color"></span></center>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="text" class=" form-control input" id="lname" placeholder="Last Name" required   onblur="lastname()">
+                    <center><span style="display: block;" id="p2" class="validation_color"></span></center>
+                  </div>
+
+                 </div>
+                 <input type="email" class="input form-control" id="email" placeholder="Email" required   onblur="emailaddress()">
+                 <center><span style="display: block;" id="p3" class="validation_color"></span></center>
+
+                 <input type="tel" class="input form-control" id="phone"  placeholder="0348 2763811" onblur="cellPhone()" required>
+                 <center><span style="display: block;" id="p4" class="validation_color"></span></center>
+
+                 <textarea class="input form-control" placeholder="Type your message here..." id="message" cols="4" rows="4"  onblur="message()"></textarea>
+                 <center><span style="display: block;" id="p5" class="validation_color"></span></center>
+
+                 <div class="Submit">
+                   
+                  <button style="border-radius: 10px; margin-top: 10px; margin-bottom: 10px;"  type="submit"> 
+                    SUBMIT
+                  </button>
+
+                </div>
+                  </form>
+                </div>
+
+                <div class="col-md-6">
+                  <div id="embedMap" >
+                    <!--Google map will be embedded here-->
+                </div> 
+            </div>
+        </div>
+        </div>
+
+        <div class="footer-dark">
+          <footer>
+              <div class="container">
+                  <div class="row">
+      
+                      <div class="col-md-6 item text tangoline" id="tangoline">
+                          <h3>Tangoline</h3>
+                          <p >Video games are the current rend and people of all ages are behind the various kinds of video games available today. A video game is an electronic game which involves a human interaction with a user interface, which would generate a visual feedback onto a video device.
+      
+                            </p>
+                      </div>
+                      <div class="col-sm-6 col-md-3 item games ">
+                          <h3>Brands</h3>
+                          <ul>
+                              <li><a href="../brands/Sony.html">Sony</a></li>
+                              <li><a href="../brands/Actvision.html">Actvision</a></li>
+                              <li><a href="../brands/Tencent.html">Tencent</a></li>
+                              <li><a href="../brands/Ubisoft.html">Ubisoft</a></li>
+                              <li><a href="../brands/epic.html">Epic Games</a></li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-6 col-md-3 item console">
+                          <h3>Consoles</h3>
+                          <ul>
+                              <li><a href="../pages/console.html">PS5</a></li>
+                              <li><a href="../pages/console.html">Xbox Series X</a></li>
+                              <li><a href="../pages/console.html">Xbox Series S</a></li>
+                              <li><a href="../pages/console.html">PS4 Pro</a></li>
+                              <li><a href="../pages/console.html">Nintendo Switch</a></li>
+                          </ul>
+                      </div>
+      
+                      <div class="col item social"><a href="https://www.facebook.com/login.php"><i class="icon ion-social-facebook"></i></a>
+                      <a href="https://twitter.com/i/flow/login"><i class="icon ion-social-twitter"></i></a>
+                      <a href="https://www.whatsapp.com/"><i class="icon ion-social-whatsapp"></i></a>
+                      <a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a></div>
+                  </div>
+                  <p class="copyright">Copyright &copy; All right reserved by Tangoline</p>
+              </div>
+          </footer>
+      </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+  <script>
+function firstname() {
+    var first = document.getElementsByTagName("input")[0].value;
+    var reg_firstname = /^[a-zA-Z]{3,}$/
+
+    if (first == "") {
+
+        document.getElementById("p1").innerHTML = "**Please Enter Your First Name**"
+    } else if (reg_firstname.test(first) != true) {
+
+        document.getElementById("p1").innerHTML = "**First Name Consist Of Minimum 3 Alphabet Without Digit's**"
+    } else {
+        document.getElementById("p1").innerHTML = ""
+
+    }
+}
+
+
+
+
+
+
+function lastname() {
+    var last = document.getElementsByTagName("input")[1].value;
+    var reg_last = /^[a-zA-Z]{3,}$/
+    if (last == "") {
+
+        document.getElementById("p2").innerHTML = "**Please Enter Your Last Name**"
+    } else if (reg_last.test(last) != true) {
+
+        document.getElementById("p2").innerHTML = "**Last Name Consist Of Minimum 3 Alphabet Without Digit's**"
+    } else {
+
+        document.getElementById("p2").innerHTML = ""
+    }
+}
+
+function emailaddress() {
+    var email = document.getElementsByTagName("input")[2].value;
+    var reg_email = /^[a-zA-Z]{3,}[0-9]{0,}(@)[a-zA-Z]{5,}(.com)$/
+    if (email == "") {
+
+        document.getElementById("p3").innerHTML = "**Please Enter Your Email Address**"
+    } else if (reg_email.test(email) != true) {
+
+        document.getElementById("p3").innerHTML = "**Enter Your Accurate Email Address**"
+    } else {
+
+        document.getElementById("p3").innerHTML = ""
+    }
+}
+function cellPhone() {
+    var phone = document.getElementsByTagName("input")[3].value;
+    var reg_phone = /^[0-9]{4}(\s)[0-9]{7}$/
+    if (phone == "") {
+
+        document.getElementById("p4").innerHTML = "**Please Enter Your Phone Number**"
+    } else if (reg_phone.test(phone) != true) {
+
+        document.getElementById("p4").innerHTML = "**Enter Your Correct Phone Number**"
+    } else {
+
+        document.getElementById("p4").innerHTML = ""
+    }
+}
+
+function message() {
+    var comment = document.getElementsByTagName("input")[4].value;
+    var reg_comment = /^[a-zA-Z]{8,}$/
+
+    if (comment == "") {
+
+        document.getElementById("p5").innerHTML = "**Please Fill Out**"
+    } else if (reg_comment.test(comment) != true) {
+
+        document.getElementById("p5").innerHTML = "**Message Consist Of Minimum 8 Letter*"
+    } else {
+        document.getElementById("p5").innerHTML = ""
+
+    }
+}
+  </script>
+</html>
